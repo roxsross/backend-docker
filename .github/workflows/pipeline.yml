@@ -60,12 +60,4 @@ jobs:
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}      
-      - name: Slack Notification
-        uses: rtCamp/action-slack-notify@v2
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_CHANNEL: deploy
-          SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_MESSAGE: 'Post Content :rocket:'
-          SLACK_TITLE: Post Title
-          SLACK_USERNAME: rtOntiime
+
